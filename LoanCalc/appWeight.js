@@ -66,7 +66,6 @@ function calcYr(e) {
             break;
     }
 
-    document.querySelector('#results').style.display = 'block';
     document.querySelector('#wByA').value = ans;
 
     e.preventDefault();
@@ -91,7 +90,6 @@ function calcMnth(e) {
             break;
     }
 
-    document.querySelector('#results').style.display = 'block';
     document.querySelector('#wByA').value = ans;
 
     e.preventDefault();

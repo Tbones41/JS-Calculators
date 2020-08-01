@@ -13,8 +13,7 @@ function loadEventListeners() {
     
     yearBtn.addEventListener('click', showYearInput);
     monthBtn.addEventListener('click', showMonthInput);
-    form.addEventListener('submit', calcMnth);
-    form.addEventListener('submit', calcYr);
+    form.addEventListener('submit', calc);
     // taskList.addEventListener('click', removeTask);
     // clearBtn.addEventListener('click', clearTasks);
     // filter.addEventListener('keyup', filterTasks)
@@ -45,7 +44,13 @@ function showMonthInput(e) {
     e.preventDefault();
 }
 
-function calcYr(e) {
+function calc(e) {
+    const inpSelec = e.target.
+
+    e.preventDefault();
+}
+
+function calcYr() {
     let ans;
     let years = weightInputYears.value;
 
@@ -68,11 +73,9 @@ function calcYr(e) {
 
     document.querySelector('#results').style.display = 'block';
     document.querySelector('#wByA').value = ans;
-
-    e.preventDefault();
 }
 
-function calcMnth(e) {
+function calcMnth() {
     
     let ans;
     let year;
@@ -93,7 +96,5 @@ function calcMnth(e) {
 
     document.querySelector('#results').style.display = 'block';
     document.querySelector('#wByA').value = ans;
-
-    e.preventDefault();
 }
 

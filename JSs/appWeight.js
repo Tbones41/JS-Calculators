@@ -97,4 +97,3 @@ function calcMnth() {
     document.querySelector('#results').style.display = 'block';
     document.querySelector('#wByA').value = ans;
 }
-

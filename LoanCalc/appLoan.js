@@ -1,4 +1,4 @@
-document.getElementById('loan-form').addEventListener('submit', function(e) {
+document.getElementById('loan-forms').addEventListener('submit', function(e) {
     document.getElementById('results').style.display = 'none';
 
     document.getElementById('loading').style.display = 'block';
@@ -9,9 +9,7 @@ document.getElementById('loan-form').addEventListener('submit', function(e) {
 });
 
 
-function calculateResults() {
-    console.log('calclating');
-    
+function calculateResults() {    
     const amount = document.getElementById('amount');
     const interest = document.getElementById('interest');
     const years = document.getElementById('years');
@@ -43,7 +41,7 @@ function showError(error) {
     const errorDiv = document.createElement('div');
 
     const card = document.querySelector('.card');
-    const heading = document.querySelector('.heading');
+    const heading = document.querySelector('.headings');
     errorDiv.className = 'alert alert-danger';
     errorDiv.appendChild(document.createTextNode(error));
 

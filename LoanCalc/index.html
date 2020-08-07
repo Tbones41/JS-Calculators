@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Pediatric Weight Calculator</title>
+    <title>Loan Calculator</title>
     <style>
         #loading, #results {
             display: none;
@@ -22,48 +22,52 @@
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card card-body text-center mt-5">
-                    <h1 class="heading display-5 pb-3">Pediatric Weight Calculator</h1>
-                    <form id="weight-form">
+                    <h1 class="headings display-5 pb-3">Loan Calculator</h1>
+                    <form id="loan-forms">
                         <div class="form-group">
-                            <div class="btn-group" role="group" aria-label="age-group">
-                                <button type="button" class="btn btn-secondary" id="months-btn">months</button>
-                                <button type="button" class="btn btn-secondary" id="years-btn">years</button>
-                              </div>
                             <div class="input-group">
-                                <input type="number" class="form-control" id="age-months" placeholder="age in months">
-                                <span class="input-group-addon months">months</span>
-                                <input type="number" class="form-control" id="age-years" placeholder="age in years" style="display: none;">
-                                <span class="input-group-addon years" style="display: none;">years</span>
+                                <span class="input-group-addon">$</span>
+                                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">%</span>
+                                <input type="number" class="form-control" id="interest" placeholder="Interest">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="years" placeholder="Years to Repay"> 
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Calculate" class="btn btn-dark btn-block">
                         </div>
-                    </form>
-                    
+                    </form> 
+                    <!--LOADER HERE-->
+                    <div id="loading">
+                        <img src="img/loading.gif" alt="">
+                    </div>
+                    <!--Results-->
                     <div id="results" class="pt-4">
                         <h5>Results</h5>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon">Weight by Age (in Kg)</span>
-                                <input type="number" class="form-control" id="wByA" disabled>
+                                <span class="input-group-addon">Monthly Payment</span>
+                                <input type="number" class="form-control" id="monthly-payment" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon">Weight Percentile</span>
-                                <input type="number" class="form-control" id="percentile" disabled>
+                                <span class="input-group-addon">Total Payment</span>
+                                <input type="number" class="form-control" id="total-payment" disabled>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <span class="input-group-addon">Remarks</span>
-                                <input type="text" class="form-control" id="remarks" disabled>
+                                <span class="input-group-addon">Total Interest</span>
+                                <input type="number" class="form-control" id="total-interest" disabled>
                             </div>
                         </div> 
-                        <div class="form-group">
-                            <input type="reset" value="Reset" class="btn btn-dark btn-block">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -71,6 +75,7 @@
     </div>
 
     <!-- Optional JavaScript -->
+    <script src="appLoan.js"></script>
     <script src="appWeight.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
